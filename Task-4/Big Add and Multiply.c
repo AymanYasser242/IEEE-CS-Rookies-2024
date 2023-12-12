@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_DIGITS 10005
+#define MAX_DIGITS 100000
 
 void addStrings(char result[], char num1[], char num2[])
 {
