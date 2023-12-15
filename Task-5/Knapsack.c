@@ -1,11 +1,14 @@
 #include <stdio.h>
 
-int knapsack(int weights[], int values[], int n, int capacity) {
-    if (n == 0 || capacity == 0) {
+int knapsack(int weights[], int values[], int n, int capacity)
+{
+    if (n == 0 || capacity == 0)
+    {
         return 0;
     }
 
-    if (weights[n - 1] > capacity) {
+    if (weights[n - 1] > capacity)
+    {
         return knapsack(weights, values, n - 1, capacity);
     }
 
@@ -15,12 +18,14 @@ int knapsack(int weights[], int values[], int n, int capacity) {
     return (includeCurrent > excludeCurrent) ? includeCurrent : excludeCurrent;
 }
 
-int main() {
+int main()
+{
     int N, W;
     scanf("%d %d", &N, &W);
 
     int weights[N], values[N];
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         scanf("%d %d", &weights[i], &values[i]);
     }
 
